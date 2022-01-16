@@ -27,7 +27,7 @@ public class QuotaCalculator {
             System.out.println("Congrats! You've met your quota");
         }
         else{
-            int salesShort = quota -sales;
+            int salesShort = quota - sales;
             System.out.println("You did not make your quota. You were " + salesShort + " sales short");
         }
     }
