@@ -16,13 +16,16 @@ public class RollTheDieGame {
 
         for (int i = 0; i < numberOfDieRolls; i++) {
             int die = random.nextInt(6) + 1;
-            total += die;
 
-            if (total > numberOfSpaces) {
+
+            if ((total + die) > numberOfSpaces) {
                 var message = String.format("You've rolled a %s. You are now on spase %s, you lost, sorry.", die, total);
                 System.out.println(message);
+                total += die;
                 break;
             }
+
+            total += die;
 
             var message = String.format("Roll # %s : You've rolled a %s. You are now on spase %s and have %s more to go.", i + 1, die, total, numberOfSpaces - total);
             System.out.println(message);
