@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeAreaCalculatorRedo {
     private Scanner scanner = new Scanner(System.in);
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         HomeAreaCalculatorRedo calculator = new HomeAreaCalculatorRedo();
         Rectangle kitchan = calculator.getRoom();
@@ -15,7 +15,7 @@ public class HomeAreaCalculatorRedo {
         System.out.println("The total area is: " + area);
         calculator.scanner.close();
     }
-    
+
     public Rectangle getRoom() {
 
         System.out.println("Enter the length of your room: ");
@@ -27,7 +27,8 @@ public class HomeAreaCalculatorRedo {
 
         return new Rectangle(length, width);
     }
-    public double calculateTotalArea(Rectangle rectangle1, Rectangle rectangle2){
+
+    public double calculateTotalArea(Rectangle rectangle1, Rectangle rectangle2) {
         return rectangle1.calculateArea() + rectangle2.calculateArea();
     }
 
